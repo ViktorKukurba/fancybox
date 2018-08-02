@@ -20,7 +20,6 @@ body.compensate-for-scrollbar {
   position: fixed;
   -webkit-tap-highlight-color: transparent;
   top: 0;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   width: 100%;
   z-index: 99992; }
@@ -117,9 +116,7 @@ body.compensate-for-scrollbar {
   position: absolute;
   text-align: center;
   top: 0;
-  transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
   white-space: normal;
   width: 100%;
   z-index: 99994; }
@@ -167,7 +164,6 @@ body.compensate-for-scrollbar {
   vertical-align: middle; }
 
 .fancybox-slide--image .fancybox-content {
-  -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
   animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -181,12 +177,9 @@ body.compensate-for-scrollbar {
   padding: 0;
   position: absolute;
   top: 0;
-  -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -194,11 +187,9 @@ body.compensate-for-scrollbar {
   z-index: 99995; }
 
 .fancybox-can-zoomOut .fancybox-content {
-  cursor: -webkit-zoom-out;
   cursor: zoom-out; }
 
 .fancybox-can-zoomIn .fancybox-content {
-  cursor: -webkit-zoom-in;
   cursor: zoom-in; }
 
 .fancybox-can-drag .fancybox-content {
@@ -458,7 +449,6 @@ body.compensate-for-scrollbar {
 
 /* Loading indicator */
 .fancybox-loading {
-  -webkit-animation: fancybox-rotate .8s infinite linear;
   animation: fancybox-rotate .8s infinite linear;
   background: transparent;
   border: 6px solid rgba(100, 100, 100, 0.5);
@@ -474,20 +464,10 @@ body.compensate-for-scrollbar {
   width: 60px;
   z-index: 99999; }
 
-@-webkit-keyframes fancybox-rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
 @keyframes fancybox-rotate {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
 /* Transition effects */
@@ -497,17 +477,14 @@ body.compensate-for-scrollbar {
 /* transitionEffect: slide */
 .fancybox-fx-slide.fancybox-slide--previous {
   opacity: 0;
-  -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0); }
 
 .fancybox-fx-slide.fancybox-slide--next {
   opacity: 0;
-  -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0); }
 
 .fancybox-fx-slide.fancybox-slide--current {
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 /* transitionEffect: fade */
@@ -522,66 +499,63 @@ body.compensate-for-scrollbar {
 /* transitionEffect: zoom-in-out */
 .fancybox-fx-zoom-in-out.fancybox-slide--previous {
   opacity: 0;
-  -webkit-transform: scale3d(1.5, 1.5, 1.5);
   transform: scale3d(1.5, 1.5, 1.5); }
 
 .fancybox-fx-zoom-in-out.fancybox-slide--next {
   opacity: 0;
-  -webkit-transform: scale3d(0.5, 0.5, 0.5);
   transform: scale3d(0.5, 0.5, 0.5); }
 
 .fancybox-fx-zoom-in-out.fancybox-slide--current {
   opacity: 1;
-  -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1); }
 
 /* transitionEffect: rotate */
 .fancybox-fx-rotate.fancybox-slide--previous {
   opacity: 0;
-  -webkit-transform: rotate(-360deg);
   -ms-transform: rotate(-360deg);
   transform: rotate(-360deg); }
 
 .fancybox-fx-rotate.fancybox-slide--next {
   opacity: 0;
-  -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg); }
 
 .fancybox-fx-rotate.fancybox-slide--current {
   opacity: 1;
-  -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg); }
 
 /* transitionEffect: circular */
 .fancybox-fx-circular.fancybox-slide--previous {
   opacity: 0;
-  -webkit-transform: scale3d(0, 0, 0) translate3d(-100%, 0, 0);
   transform: scale3d(0, 0, 0) translate3d(-100%, 0, 0); }
 
 .fancybox-fx-circular.fancybox-slide--next {
   opacity: 0;
-  -webkit-transform: scale3d(0, 0, 0) translate3d(100%, 0, 0);
   transform: scale3d(0, 0, 0) translate3d(100%, 0, 0); }
 
 .fancybox-fx-circular.fancybox-slide--current {
   opacity: 1;
-  -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   transform: scale3d(1, 1, 1) translate3d(0, 0, 0); }
 
 /* transitionEffect: tube */
 .fancybox-fx-tube.fancybox-slide--previous {
-  -webkit-transform: translate3d(-100%, 0, 0) scale(0.1) skew(-10deg);
   transform: translate3d(-100%, 0, 0) scale(0.1) skew(-10deg); }
 
 .fancybox-fx-tube.fancybox-slide--next {
-  -webkit-transform: translate3d(100%, 0, 0) scale(0.1) skew(10deg);
   transform: translate3d(100%, 0, 0) scale(0.1) skew(10deg); }
 
 .fancybox-fx-tube.fancybox-slide--current {
-  -webkit-transform: translate3d(0, 0, 0) scale(1);
   transform: translate3d(0, 0, 0) scale(1); }
+
+/* Fullscreen  */
+.fancybox-button--fullscreen::before {
+  width: 15px;
+  height: 11px;
+  left: calc(50% - 7px);
+  top: calc(50% - 6px);
+  border: 2px solid;
+  background: none; }
 
 /* Share */
 .fancybox-share {
@@ -667,6 +641,27 @@ body.compensate-for-scrollbar {
   padding: 10px 15px;
   width: 100%; }
 
+/* Slideshow button */
+.fancybox-button--play::before,
+.fancybox-button--pause::before {
+  top: calc(50% - 6px);
+  left: calc(50% - 4px);
+  background: transparent; }
+
+.fancybox-button--play::before {
+  width: 0;
+  height: 0;
+  border-top: 6px inset transparent;
+  border-bottom: 6px inset transparent;
+  border-left: 10px solid;
+  border-radius: 1px; }
+
+.fancybox-button--pause::before {
+  width: 7px;
+  height: 11px;
+  border-style: solid;
+  border-width: 0 2px 0 2px; }
+
 /* Thumbs */
 .fancybox-thumbs {
   background: #fff;
@@ -678,7 +673,7 @@ body.compensate-for-scrollbar {
   padding: 2px 2px 4px 2px;
   position: absolute;
   right: 0;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   top: 0;
   width: 212px;
   z-index: 99995; }

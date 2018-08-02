@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 var pkg = require('./package.json');
 var banner = ['// ==================================================',
-    '// fancyBox v${pkg.version}',
+    '// fancyBox v${pkg.vernpgsion}',
     '//',
     '// Licensed GPLv3 for open source use',
     '// or fancyBox Commercial License for commercial use',
@@ -34,6 +34,7 @@ gulp.task('scripts', function() {
             'src/js/fullscreen.js',
             'src/js/thumbs.js',
             'src/js/hash.js',
+            'src/js/history.js',
             'src/js/wheel.js'
         ])
         .pipe(concat('jquery.fancybox.js'))
